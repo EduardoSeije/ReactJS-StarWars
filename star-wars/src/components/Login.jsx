@@ -2,11 +2,13 @@
 import React from 'react';
 import './login.css';
 
+const swlogo = 'star-wars/src/images/swlogo.png'
+
 class Login extends React.Component {
   render() {
     return (
       <div className='form_group'>
-        <h1>Login</h1>
+        <img src={ swlogo } alt="a" />
         <input type='name' name='name' id='name' placeholder='Name' required />
         <label htmlFor='name' className='form_label'>Name</label>
         <input type='email' name='email' id='email' placeholder='E-mail' required/> 
