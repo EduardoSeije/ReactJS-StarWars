@@ -1,5 +1,8 @@
 import React, { useContext } from 'react';
 import { PlanetContext } from '../Context/PlanetProvider';
+import PlanetsFilter from './PlanetsFilter';
+import './table.css';
+import TableShips from './TableShips';
 
 const PlanetTable = () => {
   const {
@@ -33,7 +36,8 @@ const PlanetTable = () => {
 
   return (
     <>
-      <table>
+    <PlanetsFilter />
+      <table className='table'>
         <thead>
           <tr>
             {
@@ -106,6 +110,7 @@ const PlanetTable = () => {
           </div>
         )) }
       </div>
+      <TableShips />
     </>
   );
 };

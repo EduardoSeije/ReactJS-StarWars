@@ -28,93 +28,106 @@ const PlanetsFilter = () => {
   const [sort, setSort] = useState('ASC');
 
   return (
-    <div>
-      <input
-        data-testid="name-filter"
-        onChange={ ({ target: { value: valueName } }) => setName(valueName) }
-      />
-      <select
-        data-testid="column-filter"
-        onChange={ ({ target: { value: valueColumn } }) => setDropdown(valueColumn) }
-      >
-        {dropdownColumns.filter((column) => !usedFilter.includes(column))
-          .map((column) => <option value={ column } key={ column }>{ column }</option>)}
-      </select>
-      <select
-        data-testid="comparison-filter"
-        onChange={ ({ target: { value: valueComparison } }) => (
-          setComparison(valueComparison)) }
-      >
-        {comparisons.map((comparis) => (
-          <option value={ comparis } key={ comparis }>{ comparis }</option>))}
-      </select>
-
-      <input
-        data-testid="value-filter"
-        onChange={ ({ target: { value: valueNumber } }) => setValue(valueNumber) }
-      />
-
-      <button
-        type="button"
-        data-testid="button-filter"
-        disabled={ !value }
-        onClick={ () => {
-          setNumericFilter([...filterByNumericValues,
-            { dropdown, comparison, value }]);
-          usedFilter.push(dropdown);
-          setUsedFilter([...usedFilter]);
-          setDropdown(dropdownColumns
-            .filter((column) => !usedFilter.includes(column))[0]);
-        } }
-      >
-        Filtrar
-      </button>
-      <select
-        value={ dropdownOrder }
-        data-testid="column-sort"
-        onChange={
-          ({
-            target: { value: valueDropodownOrder },
-          }) => setDropdownOrder(valueDropodownOrder)
-        }
-      >
-        {Object.keys(dropdownOrders).map((dropdownOpt) => (
-          <option value={ dropdownOpt } key={ dropdownOpt }>{dropdownOpt}</option>))}
-      </select>
-      <label htmlFor="asc">
+    <>
+    <div className='filterForm'>
         <input
-        // https://www.w3schools.com/jsref/prop_checkbox_defaultchecked.asp
+          className='input_name'
+          placeholder=' Busca por nome'
+          data-testid="name-filter"
+          onChange={ ({ target: { value: valueName } }) => setName(valueName) }
+        />
+        <select
+          data-testid="column-filter"
+          onChange={ ({ target: { value: valueColumn } }) => setDropdown(valueColumn) }
+        >
+          {dropdownColumns.filter((column) => !usedFilter.includes(column))
+            .map((column) => <option value={ column } key={ column }>{ column }</option>)}
+        </select>
+        <select
+          data-testid="comparison-filter"
+          onChange={ ({ target: { value: valueComparison } }) => (
+            setComparison(valueComparison)) }
+        >
+          {comparisons.map((comparis) => (
+            <option value={ comparis } key={ comparis }>{ comparis }</option>))}
+        </select>
+
+        <input
+          className="input_number"
+          data-testid="value-filter"
+          placeholder=" Digite um número"
+          onChange={ ({ target: { value: valueNumber } }) => setValue(valueNumber) }
+        />
+
+        <button
+        className='filterbtn'
+          type="button"
+          data-testid="button-filter"
+          disabled={ !value }
+          onClick={ () => {
+            setNumericFilter([...filterByNumericValues,
+              { dropdown, comparison, value }]);
+            usedFilter.push(dropdown);
+            setUsedFilter([...usedFilter]);
+            setDropdown(dropdownColumns
+              .filter((column) => !usedFilter.includes(column))[0]);
+            } }
+            >
+          Filtrar
+        </button>
+      </div>
+      
+      <div className="ascDescForm">
+        <select
+          value={ dropdownOrder }
+          data-testid="column-sort"
+          onChange={
+            ({
+              target: { value: valueDropodownOrder },
+            }) => setDropdownOrder(valueDropodownOrder)
+          }
+          >
+          {Object.keys(dropdownOrders).map((dropdownOpt) => (
+            <option value={ dropdownOpt } key={ dropdownOpt }>{dropdownOpt}</option>))}
+        </select>
+        <label htmlFor="asc" className='asc'>
+          <input
+          // https://www.w3schools.com/jsref/prop_checkbox_defaultchecked.asp
           defaultChecked
+          className='input_asc'
           name="order"
           value="ASC"
           data-testid="column-sort-input-asc"
           type="radio"
           id="asc"
           onChange={ ({ target: { value: vASC } }) => setSort(vASC) }
-        />
-        Ascendente
-      </label>
-      <label htmlFor="desc">
-        <input
-          name="order"
-          value="DESC"
-          data-testid="column-sort-input-desc"
-          type="radio"
-          id="desc"
-          onChange={ ({ target: { value: vDESC } }) => setSort(vDESC) }
-        />
-        Descendente
-      </label>
-      <button
-        type="button"
-        data-testid="column-sort-button"
-        onClick={ () => {
-          setOrder({ column: dropdownOrder, sort });
-        } }
-      >
-        Filtrar
-      </button>
-    </div>
+          />
+          Ascendente
+        </label>
+        <label htmlFor="desc" className='desc'>
+          <input
+            className='input_desc'
+            name="order"
+            value="DESC"
+            data-testid="column-sort-input-desc"
+            type="radio"
+            id="desc"
+            onChange={ ({ target: { value: vDESC } }) => setSort(vDESC) }
+            />
+          Descendente
+        </label>
+        <button
+          className='filterbtn'
+          type="button"
+          data-testid="column-sort-button"
+          onClick={ () => {
+            setOrder({ column: dropdownOrder, sort });
+          } }
+          >
+          Filtrar
+        </button>
+      </div>
+      </>
   );
 };
 

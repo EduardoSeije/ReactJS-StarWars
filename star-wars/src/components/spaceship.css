@@ -1,0 +1,42 @@
+
+#spaceship1 {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  background-size: 70px 70px;
+  animation: move 20s infinite linear;
+  z-index: -1;
+  top: 1px
+}
+
+@keyframes move {
+  0% {
+    left: 500px
+  }
+  100% {
+    left: -500px;
+  }
+}
+
+#spaceship2 {
+  width: 20px;
+  height: 20px;
+  position:  absolute;
+  background-size: 20px 20px;
+  animation: move2 10s infinite linear;
+  animation-direction: reverse;
+  z-index: 0; 
+  top: 600px
+}
+
+@keyframes move2 {
+  0% {
+    bottom: 3500px;
+  }
+  50% {
+    left: 100px;
+  }
+  100% {
+    top: -3500px;
+  }
+}

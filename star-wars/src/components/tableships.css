@@ -1,0 +1,39 @@
+#ship1 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-size: 100px 100px;
+  z-index: -1;
+  animation: move 10s infinite linear;
+  animation-direction: reverse;
+  top: 80px;
+}
+
+@keyframes move {
+  0% {
+    left: 500px;
+  }
+  100% {
+    left: -500px;
+  }
+}
+
+#ship2 {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-size: 50px 50px;
+  z-index: -1;
+  animation: move 15s infinite linear;
+  top: 400px;
+}
+
+@keyframes move {
+  0% {
+    left: 500px;
+  }
+  100% {
+    left: -500px;
+  }
+}
+

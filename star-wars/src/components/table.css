@@ -1,0 +1,137 @@
+tbody {
+  font-size: 8px;
+  border: 1px solid rgba(216, 203, 24, 0.37);
+  width: 80px;
+}
+
+thead {
+  font-size: 10px;
+  border: 1px solid rgba(216, 203, 24, 0.37);
+}
+
+.asc {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.desc {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+table {
+  background: rgba (0, 0, 0, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur( 2px );
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 200, 250, 0.37);
+  margin-top: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+tr {
+  border: 1px solid rgba(0, 200, 250, 0.37);
+}
+
+td {
+  border: 1px solid rgba(0, 200, 250, 0.37);
+}
+
+.filterbtn {
+  font-family: 'Patron';
+  cursor: pointer;
+  outline: none;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 30px;
+  padding: 10px 10px;
+  width: 70px;
+  background-color: black;
+  border: 2px solid #15ff00;
+  color: #15ff00;
+  box-shadow: 0px 0px 35px, #15ff00, 0px 0px 15px #15ff00c0 inset;
+  box-shadow: 0px 0px 10px #15ff00cc, 0px 0px 3px #15ff00;
+  margin-left: 5px;
+}
+
+.input_name {
+  width: 110px;
+  border-radius: 20px;
+  background-color: black;
+  transition: box-shadow 0.5s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.input_name:focus {
+  background-color: whitesmoke;
+}
+
+.input_number {
+  width: 110px;
+  border-radius: 20px;
+  background-color: black;
+  transition: box-shadow 0.5s;
+  margin-left: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.input_number:focus {
+  background-color: whitesmoke;
+}
+
+.filterForm {
+  margin-top: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+select {
+  margin-left: 5px;
+  width: 100px;
+  border-radius: 20px;
+  background-color: black;
+  color: gray;
+  transition: box-shadow 0.5s;
+  font-family: 'Roboto', sans-serif;
+}
+
+select:focus {
+  background-color: whitesmoke;
+}
+
+.input_asc {
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: box-shadow 0.5s;
+}
+
+.input_asc:checked {
+  color: #ff0800;
+  background-color: #ff0800;
+  box-shadow: 0px 0px 35px, #ff0800, 0px 0px 15px #ff0800c0 inset;
+  box-shadow: 0px 0px 10px #ff0800cc, 0px 0px 3px #ff0800;
+}
+
+.input_desc {
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: box-shadow 0.5s;
+}
+
+.input_desc:checked {
+  color: #ff0800;
+  background-color: #ff0800;
+  box-shadow: 0px 0px 35px, #ff0800, 0px 0px 15px #ff0800c0 inset;
+  box-shadow: 0px 0px 10px #ff0800cc, 0px 0px 3px #ff0800;
+}
+
+.filterForm {
+  width: 80vw;
+  margin-left: 20px;
+}
+
+.ascDescForm {
+  width: 80vw;
+  margin-left: 20px;
+  margin-top: 10px;
+}
