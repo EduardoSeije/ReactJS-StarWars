@@ -6,7 +6,7 @@
   z-index: -1;
   animation: move 10s infinite linear;
   animation-direction: reverse;
-  top: 80px;
+  top: 40px;
 }
 
 @keyframes move {
@@ -19,13 +19,13 @@
 }
 
 #ship2 {
-  width: 10px;
-  height: 10px;
+  width: 200px;
+  height: 200px;
   position: absolute;
-  background-size: 50px 50px;
+  background-size: 500px 500px;
   z-index: -1;
   animation: move 15s infinite linear;
-  top: 400px;
+  top: 200px;
 }
 
 @keyframes move {

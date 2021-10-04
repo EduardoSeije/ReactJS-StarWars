@@ -1,42 +1,21 @@
 
-#spaceship1 {
-  width: 70px;
-  height: 70px;
+#deathstar {
+  width: 500px;
+  height: 500px;
   position: absolute;
   background-size: 70px 70px;
-  animation: move 20s infinite linear;
+  animation: move 20s forwards linear ;
+  top: 100px;
   z-index: -1;
-  top: 1px
 }
 
 @keyframes move {
   0% {
-    left: 500px
+    left: 3000px
   }
   100% {
-    left: -500px;
+    left: -3000px;
   }
 }
 
-#spaceship2 {
-  width: 20px;
-  height: 20px;
-  position:  absolute;
-  background-size: 20px 20px;
-  animation: move2 10s infinite linear;
-  animation-direction: reverse;
-  z-index: 0; 
-  top: 600px
-}
 
-@keyframes move2 {
-  0% {
-    bottom: 3500px;
-  }
-  50% {
-    left: 100px;
-  }
-  100% {
-    top: -3500px;
-  }
-}

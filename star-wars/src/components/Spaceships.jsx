@@ -7,12 +7,12 @@ class Spacechip extends React.Component {
   render () {
     return (
       <>
-        <div id='spaceship1'>
-          <img src={deathstar} alt="Deaths Star " />
-        </div>
-        <div id='spaceship2'>
-          <img src={mFalcon} alt="Millenium Falcon" />
-        </div>
+      <div className="spaceship1">
+        <img id='deathstar' src={deathstar} alt="Death Star" />
+      </div>
+      <div className="spaceship2">
+        <img id='mFalcon' src={mFalcon} alt="Millenium Falcon" />
+      </div>
       </>
     );
   };
