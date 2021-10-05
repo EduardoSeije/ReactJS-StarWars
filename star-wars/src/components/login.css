@@ -108,3 +108,7 @@
   transition: box-shadow 0.5s;
   visibility: hidden;
 }
+
+.password_div input {
+  margin-left: 20px;
+}
